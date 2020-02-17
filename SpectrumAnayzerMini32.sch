@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L power:GND #PWR01
 U 1 1 5E187269
-P 1250 1450
-F 0 "#PWR01" H 1250 1200 50  0001 C CNN
-F 1 "GND" H 1255 1277 50  0000 C CNN
-F 2 "" H 1250 1450 50  0001 C CNN
-F 3 "" H 1250 1450 50  0001 C CNN
-	1    1250 1450
+P 2200 1200
+F 0 "#PWR01" H 2200 950 50  0001 C CNN
+F 1 "GND" H 2205 1027 50  0000 C CNN
+F 2 "" H 2200 1200 50  0001 C CNN
+F 3 "" H 2200 1200 50  0001 C CNN
+	1    2200 1200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1357,49 +1357,49 @@ F 3 "~" H 1900 15400 50  0001 C CNN
 	1    1900 15400
 	1    0    0    -1  
 $EndComp
-Text GLabel 2150 1100 2    50   Input ~ 0
+Text GLabel 3100 850  2    50   Input ~ 0
 VDD
-Text GLabel 1400 1400 2    50   Input ~ 0
+Text GLabel 2350 1150 2    50   Input ~ 0
 VSS
 $Comp
 L Device:CP C1
 U 1 1 60C6F4E3
-P 1850 1350
-F 0 "C1" H 1968 1396 50  0000 L CNN
-F 1 "100uf" H 1968 1305 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1888 1200 50  0001 C CNN
-F 3 "~" H 1850 1350 50  0001 C CNN
-	1    1850 1350
+P 2800 1100
+F 0 "C1" H 2918 1146 50  0000 L CNN
+F 1 "100uf" H 2918 1055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2838 950 50  0001 C CNN
+F 3 "~" H 2800 1100 50  0001 C CNN
+	1    2800 1100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR02
 U 1 1 60DFF3C3
-P 1850 1650
-F 0 "#PWR02" H 1850 1400 50  0001 C CNN
-F 1 "GND" H 1855 1477 50  0000 C CNN
-F 2 "" H 1850 1650 50  0001 C CNN
-F 3 "" H 1850 1650 50  0001 C CNN
-	1    1850 1650
+P 2800 1400
+F 0 "#PWR02" H 2800 1150 50  0001 C CNN
+F 1 "GND" H 2805 1227 50  0000 C CNN
+F 2 "" H 2800 1400 50  0001 C CNN
+F 3 "" H 2800 1400 50  0001 C CNN
+	1    2800 1400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 1650 1850 1500
+	2800 1400 2800 1250
 Wire Wire Line
-	750  1100 1850 1100
+	1700 850  2800 850 
 Wire Wire Line
-	1850 1100 1850 1200
+	2800 850  2800 950 
 Wire Wire Line
 	2050 2150 2200 2150
-Text GLabel 850  1300 2    50   Input ~ 0
+Text GLabel 1800 1050 2    50   Input ~ 0
 DIN
 Wire Wire Line
-	850  1300 750  1300
+	1800 1050 1700 1050
 Text GLabel 2050 2150 0    50   Input ~ 0
 DIN
 Wire Wire Line
-	1850 1100 2150 1100
-Connection ~ 1850 1100
+	2800 850  3100 850 
+Connection ~ 2800 850 
 Wire Wire Line
 	15150 2150 15150 2550
 Wire Wire Line
@@ -12926,22 +12926,22 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x04_Male J1
 U 1 1 60CA0B50
-P 550 1200
-F 0 "J1" H 658 1481 50  0000 C CNN
-F 1 "Input" H 658 1390 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 550 1200 50  0001 C CNN
-F 3 "~" H 550 1200 50  0001 C CNN
-	1    550  1200
+P 1500 950
+F 0 "J1" H 1608 1231 50  0000 C CNN
+F 1 "Input" H 1608 1140 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1500 950 50  0001 C CNN
+F 3 "~" H 1500 950 50  0001 C CNN
+	1    1500 950 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	750  1400 1250 1400
+	1700 1150 2200 1150
 Wire Wire Line
-	1250 1450 1250 1400
-Connection ~ 1250 1400
+	2200 1200 2200 1150
+Connection ~ 2200 1150
 Wire Wire Line
-	1250 1400 1400 1400
-NoConn ~ 750  1200
+	2200 1150 2350 1150
+NoConn ~ 1700 950 
 $Comp
 L Connector:Conn_01x04_Male J2
 U 1 1 65ECD813
@@ -12954,4 +12954,28 @@ F 3 "~" H 31150 14500 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 NoConn ~ 30950 14500
+$Comp
+L Connector:Screw_Terminal_01x04 J3
+U 1 1 5EAF3C24
+P 800 950
+F 0 "J3" H 718 1267 50  0000 C CNN
+F 1 "ST3" H 718 1176 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-4-2.54_1x04_P2.54mm_Horizontal" H 800 950 50  0001 C CNN
+F 3 "~" H 800 950 50  0001 C CNN
+	1    800  950 
+	-1   0    0    -1  
+$EndComp
+Text GLabel 1150 1050 2    50   Input ~ 0
+DIN
+Text GLabel 1150 1150 2    50   Input ~ 0
+VSS
+Text GLabel 1150 850  2    50   Input ~ 0
+VDD
+NoConn ~ 1000 950 
+Wire Wire Line
+	1000 1150 1150 1150
+Wire Wire Line
+	1000 1050 1150 1050
+Wire Wire Line
+	1000 850  1150 850 
 $EndSCHEMATC
